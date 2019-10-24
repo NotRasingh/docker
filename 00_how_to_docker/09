@@ -1,0 +1,14 @@
+
+
+apt install build-essential
+apt install vim
+apt install git
+git clone https://github.com/NotRasingh/DockerTest.git gitRepo
+cd gitRepo
+vim test.c
+gcc test.c
+./a.out
+git config --global user.email "rasingh@student.wethinkcode.co.za"
+git add .
+git commit -m "test"
+git push

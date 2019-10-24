@@ -1,0 +1,12 @@
+FROM debian
+
+RUN apt-get update && apt-get -y upgrade
+RUN apt-get install -y wget 
+RUN apt-get install -y bzip2
+RUN wget http://dl.4players.de/ts/releases/3.0.13.8/teamspeak3-server_linux_amd64-3.0.13.8.tar.bz2
+RUN tar xvf teamspeak3-server_linux_amd64-3.0.13.8.tar.bz2
+RUN rm teamspeak3-server_linux_amd64-3.0.13.8.tar.bz2
+WORKDIR /teamspeak3-server_linux_amd64
+# RUN touch .ts3server_license_accepted
+CMD ./ts3server_minimal_runscript.sh
+
